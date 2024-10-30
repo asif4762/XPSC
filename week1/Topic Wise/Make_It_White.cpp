@@ -12,19 +12,21 @@ using namespace std;
 
 void solve()
 {
-    int a,b;
-    cin >> a >> b;
-    int op1 = a + b;
-    int op2 = a + a - 1;
-    int op3 = b + b - 1;
-    cout << max(op1, max(op2, op3)) << endl;
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    int first = -1, last = -1;
+    first = s.find('B');
+    last = s.rfind('B');
+    cout << last - first + 1 << endl;
 }
 
 int32_t main ()
 {
     fast();
-    int t = 1;
-    // cin >> t;
+    int t;
+     cin >> t;
     while(t--)
         solve();
     return 0;
