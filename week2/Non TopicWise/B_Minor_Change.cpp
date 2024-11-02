@@ -5,18 +5,13 @@ using namespace std;
 
 void ASIF()
 {
-    int n,x;
-    cin >> n >> x;
-    vector<int> v(n);
-    for(auto &it : v)
-        cin >> it;
+    string a,b;
+    cin >> a >> b;
+    int cnt = 0;
+    for(int i = 0; i < a.size(); i++)
+        if(a[i] != b[i]) cnt++;
     
-    v.erase(remove(v.begin(),v.end(),x),v.end());
-    
-    for(auto &it : v)
-        cout << it << " ";
-    
-    cout << endl;
+    cout << cnt << endl;
 }
 
 int32_t main() {
