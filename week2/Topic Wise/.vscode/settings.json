@@ -1,10 +1,336 @@
 {
+  "C_Cpp.default.cppStandard": "c++23",
+  "C_Cpp.default.cStandard": "c11",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.terminalRoot": "/",
+  "code-runner.executorMapByGlob": {
+    "pom.xml": "cd $dir && mvn clean package"
+  },
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "zig": "zig run",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runghc",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt.exe && $dir$fileNameWithoutExt.exe < input.txt > output.txt",
+    "cpp": "cd $dir && g++-14 -02 -std=c++23 $fileName -o $fileNameWithoutExt.exe && $dir$fileNameWithoutExt.exe < input.txt > output.txt"
+  },
+  "window.zoomLevel": 1,
+  "accessibility.signals.chatRequestSent": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.editor.defaultBinaryEditor"
+  ],
+  "accessibility.signals.chatResponseReceived": {
+    "sound": "off"
+  },
+  "accessibility.signals.clear": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.diffLineDeleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineInserted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineModified": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasBreakpoint": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.lineHasError": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.lineHasFoldedArea": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasWarning": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.noInlayHints": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.notebookCellCompleted": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.notebookCellFailed": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.positionHasError": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.positionHasWarning": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.progress": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.taskCompleted": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.taskFailed": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.terminalBell": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.terminalCommandFailed": {
+    "announcement": "off",
+    "sound": "off"
+  },
+  "accessibility.signals.onDebugBreak": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.voiceRecordingStopped": {
+    "sound": "off"
+  },
+  "accessibility.signals.voiceRecordingStarted": {
+    "sound": "off"
+  },
+  "accessibility.signals.terminalQuickFix": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.terminalCommandSucceeded": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.env.osx": {},
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#00FF0010"
+    },
+    {
+      "column": 100,
+      "color": "#BDB76B15"
+    },
+    {
+      "column": 120,
+      "color": "#FA807219"
+    }
+  ],
+  "editor.unicodeHighlight.includeComments": true,
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "tab.activeBorderTop": "#00FF00",
+      "tab.unfocusedActiveBorderTop": "#00FF0088",
+      "textCodeBlock.background": "#00000055"
+    },
+    "editor.wordHighlightStrongBorder": "#FF6347",
+    "editor.wordHighlightBorder": "#FFD700",
+    "editor.selectionHighlightBorder": "#A9A9A9"
+  },
+  "workbench.editor.revealIfOpen": true,
+  "workbench.tree.indent": 20,
+  "emmet.variables": {
+    "lang": "en"
+  },
+  "thunder-client.requestLayout": "Top/Bottom",
+  "cSpell.diagnosticLevel": "Hint",
+  "trailing-spaces.backgroundColor": "rgba(255,0,0,0.1)",
+  "trailing-spaces.includeEmptyLines": false,
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.enablePersistentSessions": false,
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.detectJdksAtStart": false,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.debug.settings.hotCodeReplace": "auto",
+  "java.dependency.packagePresentation": "hierarchical",
+  "java.sources.organizeImports.staticStarThreshold": 1,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/8"
+    },
+    {
+      "name": "JavaSE-11",
+      "path": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/11"
+    },
+    {
+      "name": "JavaSE-17",
+      "path": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/17"
+    },
+    {
+      "name": "JavaSE-21",
+      "path": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/21"
+    },
+    {
+      "name": "JavaSE-22",
+      "path": "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home",
+      "default": true
+    },
+    {
+      "name": "JavaSE-23",
+      "path": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/latest"
+    }
+  ],
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "zsh",
+      "env": {
+        "JAVA_HOME": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/21",
+        "ZDOTDIR": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk"
+      }
+    },
+    "JavaSE-1.8 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/8"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-11 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/11"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-17 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/17"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-21 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/21"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-22": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-23": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/latest"
+      },
+      "path": "zsh"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "JavaSE-21 LTS",
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/21"
+    },
+    {
+      "environmentVariable": "ZDOTDIR",
+      "value": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk"
+    }
+  ],
+  "java.import.gradle.java.home": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/21",
+  "maven.executable.path": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/maven/latest/bin/mvn",
+  "java.import.gradle.home": "/Users/akmasifuzzaman/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk/gradle/latest",
+  "accessibility.verbosity.terminal": false,
+  "terminal.integrated.automationProfile.linux": {},
+  "C_Cpp.codeAnalysis.clangTidy.headerFilter": "",
+  "lldb.launch.terminal": "integrated",
+  "java.maxConcurrentBuilds": 11,
+  "console-ninja.featureSet": "Community",
+  "editor.accessibilitySupport": "on",
+  "thunder-client.saveRequestOnSend": false,
+  "vscode-edge-devtools.webhintInstallNotification": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "git.openRepositoryInParentFolders": "always",
+  "C_Cpp.default.compilerPath": "/usr/local/Cellar/gcc/14.2.0_1/bin/g++-14",
+  "java.home": "/Applications/Visual Studio Code.app/Contents/Resources/appjdk-17",
+  "window.newWindowProfile": "Default",
+  "C_Cpp_Runner.msvcBatchPath": "",
+  "cSpell.languageSettings": [],
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",
   "C_Cpp_Runner.debuggerPath": "lldb",
   "C_Cpp_Runner.cStandard": "",
   "C_Cpp_Runner.cppStandard": "",
-  "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.useMsvc": false,
   "C_Cpp_Runner.warnings": [
     "-Wall",
@@ -55,6 +381,5 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }

@@ -1,16 +1,18 @@
 {
   "configurations": [
     {
-      "name": "macos-clang-arm64",
+      "name": "macos-gcc-arm64",
       "includePath": [
-        "${workspaceFolder}/**"
+        "${workspaceFolder}/**",
+        "/usr/local/Cellar/gcc/14.2.0_1/include/c++1/4.2.0",  // Include path for GCC 14
+        "/usr/local/Cellar/gcc/14.2.0_1/include/c++/14.2.0/x86_64-apple-darwin20.3.0"  // Architecture-specific path for macOS
       ],
-      "compilerPath": "/usr/bin/clang",
-      "cStandard": "${default}",
-      "cppStandard": "${default}",
-      "intelliSenseMode": "macos-clang-arm64",
+      "compilerPath": "/usr/local/Cellar/gcc/14.2.0_1/bin/g++-14",  // Use GCC 14 compiler
+      "cppStandard": "c++23",  // Set C++ standard to C++23
+      "cStandard": "c11",  // Set C standard to C11 (can be changed if needed)
+      "intelliSenseMode": "macos-gcc-arm64",  // Update IntelliSense mode for GCC
       "compilerArgs": [
-        ""
+        "-std=c++23"  // Ensure C++23 is used during compilation
       ]
     }
   ],
