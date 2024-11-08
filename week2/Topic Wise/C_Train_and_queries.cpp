@@ -1,44 +1,60 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define B begin()
 #define E end()
 #define ll long long
-#define all(x) x.B,x.E
-#define fast() ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define all(x) x.B, x.E
+#define int long long
+#define pii pair<ll, ll>
 #define mod 1000000007
 #define inf 1e18
 #define endl "\n"
-#define pii pair<int,int>
+#define syes cout << "Yes" << endl
+#define sno cout << "No" << endl
+#define minus_one cout << -1 << endl
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
+#define fastForwardRead()                \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+
 using namespace std;
 
-void solve()
+void ASIF()
 {
-    int n;
-    cin >> n;
-//    pair<string,int> students[n];
-//    for(int i = 0; i < n; i++)
-//        cin >> students[i].first >> students[i].second;
-//    
-//    for(auto [x,y] : students)
-//        cout << x << " " << y << endl;
-//    
-//    tuple<string,int,string> t[n];
-//    for(int i = 0; i < n; i++)
-//        cin >> get<0>(t[i]) >> get<1>(t[i]) >> get<2>(t[i]);
-//    
-//    for(auto [x,y,z] : t)
-//        cout << x << " " << y << " " << z << endl;
-    pair<string,pair<int,string > > p = {"dablu",{7,"01312"}};
-    
-    cout << p.first << " " << p.second.first << " " << p.second.second << endl;
-    
+    int n, k;
+    cin >> n >> k;
+    map<int,multiset<int>> mp;
+    for(int i = 1; i <= n; i++)
+    {
+        int x;
+        cin >> x;
+        mp[x].insert(i);
+    }
+    while(k--)
+    {
+        int a, b;
+        cin >> a >> b;
+        if((mp.find(a) == mp.end()) || (mp.find(b) == mp.end()))
+        {
+            no;
+        }
+        else
+        {
+            int s = *mp[a].begin();
+            int e = *mp[b].rbegin();
+            if(s < e) yes;
+            else no;
+        }
+    }
 }
 
-int32_t main ()
+int32_t main()
 {
-    fast();
+    fastForwardRead();
     int t = 1;
-    // cin >> t;
-    while(t--)
-        solve();
+    cin >> t;
+    while (t--)
+        ASIF();
     return 0;
 }
