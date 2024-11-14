@@ -24,28 +24,31 @@ using namespace std;
 void ASIF()
 {
     int n;
-    cin>>n;
-    int mt[n+5][n];
-    for(int i = 1; i<=n; i++)
+    cin >> n;
+    vector<vector<int>> v(n+1,vector<int>(n+1));
+    for(int i = 1; i <= n; i++)
     {
-        for(int j=1; j<n; j++)
-             cin>>mt[i][j];
-      }
-      map < int , int>mp;
-      map< int , int> m;
-      for(int i=1; i<=n; i++)
-      {
-         mp[mt[i][n-1]] = i;
-         m[mt[i][n-1]]++;
-      }
-      int idx =0, val;
-      for(auto u:m) {
-        if(u.second==1) idx = u.first;
-        else val = u.first;
-      }
-       for(int i=1; i<n; i++)
-          cout<<mt[mp[idx]][i]<<" ";
-       cout<<val<<endl;
+        for(int j = 1; j <= n - 1; j++)
+            cin >> v[i][j];
+    }
+    map<int,int> mp;
+    map<int,int> m;
+    for(int i = 1; i <= n; i++)
+    {
+        mp[v[i][n-1]] = i;
+        m[v[i][n-1]]++;
+    }
+    int idx = 0, val;
+    for(auto [x,y] : m)
+    {
+        if(y == 1) idx = mp[x];
+        else val = x;
+    }
+    for(int i = 1; i <= n-1; i++)
+    {
+        cout << v[idx][i] << " ";
+    }
+    cout << val << endl;
 }
 
 int32_t main()
