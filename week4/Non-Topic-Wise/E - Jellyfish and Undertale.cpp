@@ -25,21 +25,11 @@ void ASIF(){
     ll a,b,n;
     cin>>a>>b>>n;
     ll sum=0;
-    if(a<=b){
-        sum+=a;
-    }
-    else{
-        sum+=b;
-    }
+    sum+=b;
+    vector<ll>v(n);
     for(ll i=0;i<n;i++){
-        ll x;
-        cin>>x;
-        if(x+1<=a){
-            sum+=x;
-        }
-        else{
-            sum+=a-1;
-        }
+        cin>>v[i];
+        sum+=min(v[i],a-1);
     }
     cout<<sum<<endl;
 }
