@@ -22,14 +22,19 @@
 using namespace std;
 
 void ASIF(){
-    int a,b,n;
+    ll a,b,n;
     cin>>a>>b>>n;
-    int sum=0;
-    sum+=b;
-    for(int i=0;i<n;i++){
-        int x;
+    ll sum=0;
+    if(a<=b){
+        sum+=a;
+    }
+    else{
+        sum+=b;
+    }
+    for(ll i=0;i<n;i++){
+        ll x;
         cin>>x;
-        if(x<=a){
+        if(x+1<=a){
             sum+=x;
         }
         else{
