@@ -25,14 +25,7 @@ void ASIF()
 {
     int n;
     cin >> n;
-    int cnt=0;
-    int tmp1 = n;
-    while(n > 1){
-        n = n/2;
-        cnt++;
-    }
-    int tmp2 = (1LL << cnt);
-    cout << tmp1 - tmp2 << " " << tmp2 << endl;
+    cout << n - (1 << __lg(n)) <<" " << (1 << __lg(n)) << endl;
 }
 int32_t main()
 {
