@@ -23,39 +23,41 @@ using namespace std;
 
 void ASIF()
 {
-    ll a = 0LL, b, c, d;
-    cin >> b >> c >> d;
-    for(int i = 0; i < 64; i++){
-        ll tmpA = (1LL << i);
-        ll tmpB,tmpC,tmpD;
-        if(tmpA & b){
-            tmpB = tmpA;
+    int n;
+    cin >> n;
+    vector<int> ans;
+    while(n){
+        if(n%2==0){
+            ans.push_back(0);
         }
         else{
-            tmpB = 0LL;
+            ans.push_back(1);
         }
-        if(tmpA & c){
-            tmpC = tmpA;
-        }
-        else{
-            tmpC = 0LL;
-        }
-        if(tmpA & d){
-            tmpD = tmpA;
-        }
-        else{
-            tmpD = 0LL;
-        }
-        if((tmpA | tmpB) - (tmpA & tmpC) == tmpD){
-            a += tmpA;
+        n /= 2;
+    }
+    ans.push_back(0);
+    for(int i = 0; i < ans.size()-1; i++){
+        if(ans[i]&&ans[i+1]){
+            for(int j = i; j < ans.size(); j++){
+                if(ans[j] == 0){
+                    ans[j]=1;
+                    ans[i]=-1;
+                    break;
+                }
+                else{
+                    ans[j]=0;
+                }
+            }
         }
     }
-    if((a|b) == (d + (a & c))){
-        cout << a << endl;
+    if(ans[ans.size()-1] == 0){
+        ans.pop_back();
     }
-    else{
-        cout << -1 << endl;
+    cout << ans.size() << endl;
+    for(auto &it : ans){
+        cout << it << " ";
     }
+    cout << endl;
 }
 
 int32_t main()
